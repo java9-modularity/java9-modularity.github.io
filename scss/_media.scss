@@ -1,0 +1,230 @@
+/*------------------------------------------------------------------
+14. Begin All Media Queries
+------------------------------------------------------------------*/
+
+/* Large Devices, Wide Screens  */
+@media only screen and (max-width: 1199px) {
+	h2 {
+		&.page-header {
+			&-left, &-right {
+				margin-top: 0;
+			}
+		}
+	}
+
+	/* Begin Header */
+	.header {
+		&-main {
+			&-right {
+				padding-top: 0;
+			}
+		}
+	}
+	/* End Header */
+	/* Begin Features */
+	.features {
+		&-item {
+			margin-top: 0;
+			margin-bottom: 25px;
+			&-icon {
+				width: 40px;
+				height: 40px;
+				img, svg {
+					max-width: 40px;
+					max-height: 40px;
+				}
+			}
+			&-left {
+				padding-right: 0;
+				.features-item-text {
+					padding-right: 10px + 40px;
+				}
+			}
+			&-right {
+				padding-left: 0;
+				.features-item-text {
+					padding-left: 10px + 40px;
+				}
+			}
+		}
+	}
+	/* End Features */
+	/* Begin To Top */
+	.up {
+		bottom: 90px;
+	}
+	/* End To Top */
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 991px) {
+	html {
+		font-size: 90%;
+	}
+	/* Begin Bootstrap Components */
+	/* Begin Navbar */
+	.nav > li {
+		& > a {
+			margin: 0;
+		}
+	}
+	/* End Navbar */
+	/* End Bootstrap Components */
+	/* Begin Header */
+	.header {
+		padding-bottom: 75px;
+		&-main {
+			padding-top: 120px;
+			&-right {
+				text-align: center;
+			}
+		}
+	}
+	/* Begin Navbar Fixed */
+	.navbar-clone {
+		padding: 15px 0;
+		background: rgba(#fff, .95);
+	}
+	.navbar-stick {
+		padding: 10px 0;
+		background: rgba(#fff, .95);
+	}
+	/* End Navbar Fixed */
+	/* End Header */
+	/* Begin Features */
+	.features {
+		padding-bottom: 70px - 40px;
+		&-item {
+			margin-bottom: 40px;
+			h3 {
+				padding-top: 25px;
+			}
+			&-icon {
+				width: 50px;
+				height: 50px;
+				img, svg {
+					max-width: 50px;
+					max-height: 50px;
+				}
+			}
+			&-left, &-right {
+				text-align: center;
+				.features-item-icon {
+					float: none;
+					margin: 0 auto;
+				}
+				.features-item-text {
+					padding-right: 0;
+					padding-left: 0;
+				}
+			}
+		}
+		&-image {
+			margin-bottom: 40px;
+		}
+	}
+	/* End Features */
+	/* Begin Description */
+	.description {
+		&-left {
+			padding-bottom: (75px / 2) - 25px;
+		}
+	}
+	/* End Description */
+	/* Begin Plans */
+	.plans {
+		padding-bottom: 75px - 25px;
+		.item-main {
+			margin-bottom: 25px;
+		}
+	}
+	/* End Plans */
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+	html {
+		font-size: 80%;
+	}
+	/* Begin Bootstrap Components */
+	/* Begin Navbar */
+	.nav > li {
+		& > a {
+			margin: 0 15px;
+		}
+	}
+	.navbar {
+		&-default {
+			& .navbar-toggle {
+				margin-right: 15px;
+			}
+		}
+	}
+	/* End Navbar */
+	/* End Bootstrap Components */
+
+	/* Begin Footer */
+	.footer {
+		.form-control {
+			margin: 0;
+			width: 100%;
+		}
+		&-bottom {
+			margin-top: (75px / 2);
+			text-align: center;
+			p {
+				padding-bottom: 25px;
+			}
+			&-social {
+				text-align: center;
+				ul {
+					li {
+						a {
+							margin: 0 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* End Footer */
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 479px) {
+	/* Begin Bootstrap Components */
+	/* Begin Form */
+	.form {
+		&-group {
+			margin-bottom: 15px;
+		}
+	}
+	/* End Form */
+	/* End Bootstrap Components */
+	
+	/* Begin Download */
+	.download {
+		.btn {
+			margin: 7px;
+			width: 70%;
+		}
+	}
+	/* End Download */
+	/* Begin Footer */
+	.footer {
+		&-bottom {
+			&-social {
+				ul {
+					li {
+						a {
+							width: 30px;
+							height: 30px;
+							font-size: 16px;
+							line-height: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* End Footer */
+}

@@ -1,0 +1,678 @@
+@import 'vars';
+
+/*----------------------
+1. Base Style
+2. Bootstrap Components
+3. Header
+4. Services
+5. Features
+6. Description
+7. Author
+8. Feedback
+9. Plans
+10. Download
+11. Contact Us
+12. Footer
+13. To Top / .up
+14. All Media Queries
+----------------------*/
+
+/*------------------------------------------------------------------
+1. Begin Base Style
+------------------------------------------------------------------*/
+::selection {
+	background: rgba($accent, .4);
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: $main-font;
+	font-size: 16px;
+	color: $main-color;
+}
+
+h1 {
+	font: 900 2.7rem/1.2 $header-font;
+}
+h2 {
+	font: 700 2.1rem $header-font;
+	&.page-header {
+		margin: 65px auto (75px / 2);
+		text-align: center;
+		&-left, &-right {
+			margin: 70px 0 (75px / 2);
+		}
+		&-left {
+			text-align: left;
+			&:after {
+				right: auto;
+			}
+		}
+		&-right {
+			text-align: right;
+			&:after {
+				left: auto;
+			}
+		}
+	}
+}
+h3 {
+	margin-bottom: 15px;
+	font: 700 20px $header-font;
+}
+
+p {
+	font: 400 16px/1.7 $main-font;
+	&.page-heade-p {
+		margin-bottom: (75px / 2);
+		text-align: center;
+	}
+}
+
+img, svg {
+	vertical-align: middle;
+}
+/* End Base Style */
+
+/*------------------------------------------------------------------
+2. Begin Bootstrap Components
+------------------------------------------------------------------*/
+
+/* Begin Form */
+.form {
+	&-control {
+		height: 38px;
+		&:focus {
+			border-color: $accent;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+	&-group {
+		margin-bottom: 30px;
+	}
+}
+.invalid {
+	border-color: rgba(red, .8);
+	&:focus {
+		border-color: rgba(red, .8);
+	}
+}
+.success {
+	border-color: rgba(green, .6);
+	&:focus {
+		border-color: rgba(green, .6);
+	}
+}
+/* End Form */
+/* Begin Button */
+.btn {
+	padding: 10px 25px;
+	font: 400 15px $header-font;
+	border: none;
+	transition: all .3s;
+	&:focus,
+	&:active:focus,
+	&.active:focus {
+		outline: none;
+	}
+	&-primary {
+		background-color: $accent;
+		&:hover {
+			background-color: darken($accent, 5%);
+		}
+		&:focus,
+		&:active,
+		&.active,
+		&:active:hover,
+		&.active:hover,
+		&:active:focus,
+		&.active:focus {
+			background-color: darken($accent, 7%);
+		}
+	}
+	&-lg {
+		padding: 15px 25px;
+	}
+}
+/* End Button */
+/* Begin Navbar */
+.nav > li {
+	& > a {
+		margin: 0 15px;
+		padding: 10px 0;
+	}
+}
+.navbar {
+	min-height: $logo-height;
+	border: none;
+	&-brand {
+		height: $logo-height;
+		padding: 0 15px;
+		line-height: $logo-height;
+		&:hover,
+		&:focus {
+			transition: all .3s;
+			p {
+				color: lighten($main-color, 7%);
+			}
+		}
+		& > img {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 5px;
+			width: $logo-width;
+			height: $logo-height;
+		}
+		& > p {
+			display: inline-block;
+			font: 600 25px/#{$logo-height} $header-font;
+			color: $main-color;
+			&:hover,
+			&:focus {
+				color: lighten($main-color, 10%);
+			}
+		}
+	}
+	&-nav > li > a {
+		display: inline-block;
+		position: relative;
+		&:after {
+			display: block;
+			position: absolute;
+			bottom: 8px;
+			content: '';
+			width: 0;
+			height: 2px;
+			background: $accent;
+			transition: all .5s;
+		}
+	}
+	@media (min-width: 768px) {
+		.navbar-nav > li > a {
+			padding: 10px 0;
+		}
+	}
+	&-default {
+		background: none;
+		&.navbar-brand {
+			color: $main-color;
+			transition: all .3s;
+			&.navbar-brand:hover,
+			&.navbar-brand:focus {
+				color: lighten($main-color, 10%);
+			}
+		}
+		&.navbar-text {
+			color: $main-color;
+		}
+		& .navbar-nav {
+			& > li > a {
+				font-family: $header-font;
+				font-size: 14px;
+				color: $main-color;
+				transition: all .3s;
+				&:hover,
+				&:focus {
+					color: $accent;
+					&:after {
+						width: 100%;
+					}
+				}
+			}
+			& > .active > a,
+			& > .active > a:hover,
+			& > .active > a:focus {
+				color: $accent;
+				background-color: transparent;
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+		& .navbar-toggle {
+			margin-top: 4px;
+			margin-right: 0;
+			margin-bottom: 4px;
+			padding: 9px 0 9px 10px;
+			border: none;
+			background: none;
+			.icon-bar {
+				background-color: $accent;
+			}
+			&:hover, &:active, &:focus {
+				.icon-bar {
+					background-color: darken($accent, 10%);
+				}
+				background: none;
+			}
+		}
+		& .navbar-collapse {
+			border: none;
+		}
+	}
+}
+@media (max-width: 991px) {
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left,.navbar-right {
+		float: none!important;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-fixed-top {
+		top: 0;
+	}
+	.navbar-collapse.collapse {
+		display: none!important;
+	}
+	.navbar-nav {
+		float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav > li {
+		float: none;
+	}
+	.collapse.in {
+		display: block!important;
+	}
+	.collapsing {
+		overflow: hidden!important;
+	}
+}
+/* End Navbar */
+/* Begin Page Header */
+.page-header {
+	position: relative;
+	border-bottom: none;
+	&:after {
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: -5px;
+		left: 0;
+		margin: 0 auto;
+		content: '';
+		width: 100px;
+		height: 5px;
+		background-color: $accent;
+	}
+}
+/* End Page Header */
+/* End Bootstrap Components */
+
+/* Begin Preloader */
+#preloader {
+	&-main {
+		z-index: 999999;
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		background: #f3fbee;
+		img {
+			position: relative;
+			top: 50%;
+			margin-top: -40px;
+			width: 80px;
+			height: 80px;
+		}
+	}
+}
+/* End Preloader */
+
+/*------------------------------------------------------------------
+3. Begin Header
+------------------------------------------------------------------*/
+
+/* Begin Header */
+.header {
+	padding-bottom: 100px;
+	background: $bg-dark;
+	.navbar {
+		opacity: 0;
+	}
+	&-main {
+		padding-top: 180px;
+		h1 {
+			margin-bottom: 25px;
+		}
+		p {
+			margin-bottom: 25px;
+		}
+		&-left {
+			img {
+				margin: 0 auto;
+			}
+		}
+		&-right {
+			padding: 50px 0 40px;
+		}
+	}
+}
+/* Begin Navbar Fixed */
+.navbar-clone {
+	z-index: 9999;
+	position: fixed;
+	width: 100%;
+	padding: (75px / 2) 0;
+	transition: all .5s;
+	opacity: 1;
+}
+.navbar-stick {
+	padding: 10px 0;
+	background: rgba(#fff, .95);
+}
+/* End Navbar Fixed */
+/* End Header */
+
+/*------------------------------------------------------------------
+4. Begin Services
+------------------------------------------------------------------*/
+
+.services {
+	background: $bg-light;
+	padding-bottom: 45px;
+	&-item {
+		margin-top: 25px;
+		margin-bottom: 15px;
+		text-align: center;
+		h3 {
+			margin-top: 25px;
+		}
+		img {
+			max-width: 100px;
+			max-height: 100px;
+		}
+	}
+}
+/* End Services */
+
+/*------------------------------------------------------------------
+5. Begin Features
+------------------------------------------------------------------*/
+
+.features {
+	background: $bg-dark;
+	padding-bottom: 70px;
+	&-main {
+		margin-top: 20px;
+	}
+	&-item {
+		margin-top: 40px;
+		h3 {
+			margin-top: 0;
+		}
+		&-icon {
+			width: 50px;
+			height: 50px;
+			img, svg {
+				max-width: 50px;
+				max-height: 50px;
+			}
+		}
+		&-left {
+			padding-right: 35px;
+			text-align: right;
+			.features-item-icon {
+				float: right;
+			}
+			.features-item-text {
+				padding-right: 20px + 50px;
+			}
+		}
+		&-right {
+			padding-left: 30px;
+			text-align: left;
+			.features-item-icon {
+				float: left;
+			}
+			.features-item-text {
+				padding-left: 20px + 50px;
+			}
+		}
+	}
+	&-image {
+		text-align: center;
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+/* End Features */
+
+/*------------------------------------------------------------------
+6. Begin Description
+------------------------------------------------------------------*/
+
+.description {
+	padding: 75px 0;
+	background: $bg-light;
+	img {
+		margin: 0 auto;
+	}
+	p {
+		margin-bottom: 25px;
+	}
+}
+/* End Description */
+
+/*------------------------------------------------------------------
+7. Begin Author
+------------------------------------------------------------------*/
+
+.author {
+	padding: 75px 0 (75px / 2);
+	background: $bg-dark;
+	img {
+		margin: 0 auto;
+	}
+	p {
+		margin-bottom: 25px;
+	}
+	&-left {
+		padding-bottom: (75px / 2);
+	}
+}
+/* End Author */
+
+/*------------------------------------------------------------------
+8. Begin Feedback
+------------------------------------------------------------------*/
+
+.feedback {
+	padding-bottom: 65px;
+	h3 {
+		margin-bottom: 5px;
+		color: $accent;
+	}
+	p {
+		span {
+			font-weight: 300;
+			font-size: 14px;
+		}
+	}
+	&-carousel {
+		text-align: center;
+		&-avatar {
+			margin: 25px auto;
+			max-width: 120px;
+			max-height: 120px;
+		}
+	}
+}
+/* End Feedback */
+
+/*------------------------------------------------------------------
+9. Begin Plans
+------------------------------------------------------------------*/
+
+.plans {
+	padding-bottom: 75px;
+	background: $bg-dark;
+	.item-main {
+		padding: 40px;
+		text-align: center;
+		border: 1px solid $gray;
+		background: #fff;
+		h3 {
+			margin: 0;
+		}
+		p.price {
+			margin: 25px 0 15px;
+			font: 900 45px $header-font;
+			span {
+				padding: 0 3px;
+				font-size: 18px;
+			}
+		}
+		ul {
+			margin: 0 0 20px;
+			padding: 0;
+			li {
+				padding: 10px 0;
+				font: 400 18px $main-font;
+				list-style-type: none;
+				span {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+/* End Plans */
+
+/*------------------------------------------------------------------
+10. Begin Download
+------------------------------------------------------------------*/
+
+.download {
+	padding-bottom: 75px;
+	text-align: center;
+	background: $bg-light;
+	.btn {
+		margin: 0 7px;
+		img {
+			vertical-align: bottom;
+			margin-right: 5px;
+			height: 18px;
+			width: 20px;
+		}
+	}
+}
+/* End Download */
+
+/*------------------------------------------------------------------
+11. Begin Contact Us
+------------------------------------------------------------------*/
+
+.contact {
+	padding-bottom: (75px - 30px);
+	text-align: center;
+	background: $bg-dark;
+	label.invalid {
+		position: absolute;
+	}
+	textarea {
+		resize: none;
+	}
+}
+/* End Contact Us */
+
+/*------------------------------------------------------------------
+12. Begin Footer
+------------------------------------------------------------------*/
+
+.footer {
+	padding-bottom: (75px - 30px);
+	text-align: center;
+	background: $bg-black;
+	color: #fff;
+	.form-control {
+		margin: 0 10px;
+		width: 390px;
+	}
+	#subscribe {
+		label {
+			position: absolute;
+		}
+	}
+	&-bottom {
+		margin-top: 75px;
+		padding-top: 25px;
+		text-align: left;
+		border-top: 1px solid #292929;
+		&-social {
+			text-align: right;
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					display: inline-block;
+					margin-bottom: 10px;
+					a {
+						display: block;
+						margin-left: 10px;
+						width: 35px;
+						height: 35px;
+						text-align: center;
+						font-size: 18px;
+						line-height: 35px;
+						color: #fff;
+						border-radius: 4px;
+						background: $accent;
+						&:hover {
+							background: darken($accent, 5%);
+							transition: all .3s;
+						}
+						&:active, &:focus {
+							background: darken($accent, 7%);
+							transition: all .3s;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* End Footer */
+
+/*------------------------------------------------------------------
+13. Begin To Top
+------------------------------------------------------------------*/
+
+.up {
+	display: none;
+	position: fixed;
+	right: 25px;
+	bottom: 40px;
+	a {
+		display: block;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		font-size: 30px;
+		line-height: 40px;
+		color: #fff;
+		border-radius: 4px;
+		background: $accent;
+		cursor: pointer;
+		opacity: .6;
+		transition: all .3s;
+		&:hover {
+			line-height: 35px;
+			opacity: 1;
+		}
+	}
+}
+/* End To Top */
+
+@import 'media';

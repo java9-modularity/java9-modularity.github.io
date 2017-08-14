@@ -1,0 +1,55 @@
+@import 'vars';
+
+// Prime theme - Owl Carousel CSS File
+
+.prime-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.prime-theme .owl-nav [class*='owl-'] {
+  color: #fff;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: lighten($accent, 25%);
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.prime-theme .owl-nav [class*='owl-']:hover {
+  background: $accent;
+  color: #fff;
+  text-decoration: none;
+}
+.prime-theme .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.prime-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+
+.prime-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.prime-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.prime-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: lighten($accent, 25%);
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px;
+}
+.prime-theme .owl-dots .owl-dot.active span, .prime-theme .owl-dots .owl-dot:hover span {
+  background: $accent;
+}
