@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="description" content="Responsive Landing Page">
-	<title>Prime - Responsive Landing Page</title>
+	<meta name="description" content="Java 9 Modularity (O'Reilly, 2017). Authored by Sander Mak and Paul Bakker.">
+	<title>Java 9 Modularity</title>
 	<!-- Favicon -->
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
@@ -48,14 +48,14 @@
 							<span class="icon-bar"></span>
 						</button>
 						<a class="navbar-brand" href="#">
-							<img src="img/logo.png" alt="Logo">
+							<img src="img/logo.png" alt="Black-tailed Godwit :)" title="Black-tailed Godwit :)">
 							<p>javamodularity.com</p>
 						</a>
 					</div>
 					<div class="collapse navbar-collapse" id="top-nav">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a data-scroll href="#services">Services</a></li>
-							<li><a data-scroll href="#features">Features</a></li>
+							<li><a data-scroll href="#services">The Book</a></li>
+							<li><a data-scroll href="#features">Chapters</a></li>
 							<li><a data-scroll href="#description">Description</a></li>
 							<li><a data-scroll href="#feedback">Feedback</a></li>
 							<li><a data-scroll href="#plans">Plans</a></li>
@@ -71,7 +71,8 @@
 			<div class="header-main">
 				<div class="header-main-right col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-push-6 col-md-6">
 					<h1>Java 9 Modularity</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque numquam voluptatibus reprehenderit ipsa deleniti voluptatem eius. Excepturi, est. Blanditiis suscipit commodi incidunt veniam nihil sunt.</p>
+					<p>The Java module system offers new ways of creating modular and maintainable applications. With this hands-on book, Java developers will learn not only about the joys of modularity, but also about the patterns needed to create truly modular and reliable applications. </p>
+					<p>Authors Sander Mak and Paul Bakker teach you the concepts behind the Java module system, along with the new tools it offers. You’ll also learn how to modularize existing code and how to steer clear of common pitfalls when migrating to Java 9.</p>
 					<a data-scroll href="#download" class="btn btn-primary" role="button">Buy</a>
 				</div>
 				<div class="header-main-left col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-pull-6 col-md-6">
@@ -85,23 +86,34 @@
 	<!-- Begin Services -->
 	<section class="services" id="services">
 		<div class="container">
-			<h2 class="page-header wow fadeInUp" data-wow-delay=".2s">What You Find</h2>
+			<h2 class="page-header wow fadeInUp" data-wow-delay=".2s">The Book</h2>
 			<div class="row">
 				<div class="services-item col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-4 wow fadeInUp" data-wow-delay=".3s">
-					<img src="img/flat-icons-pack/icon-creative-design.svg" alt="Creative Design">
-					<h3>Creative Design</h3>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
+					<img src="img/flat-icons-pack/icon-creative-design.svg" alt="Introduction to the Java Module System">
+					<h3>Introduction to the Java Module System</h3>
+					<p>The first part introduces all Java module system concepts. Starting with the modular JDK, you'll see modules are all about strong encapsulation and explicit dependencies.
+					Then it's time to write your own modules, with services to decouple modules.</p>
+					<p>After the mechanics of creating modules, the first part closes with modularity patterns. They are essential to create truly modular applications.</p>
 				</div>
 				<div class="services-item col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-4 wow fadeInUp" data-wow-delay=".3s">
-					<img src="img/flat-icons-pack/icon-cross-browser-support.svg" alt="Cross Browser Support">
-					<h3>Cross Browser Support</h3>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
+					<img src="img/flat-icons-pack/icon-cross-browser-support.svg" alt="Migration">
+					<h3>Migration</h3>
+					<p>We all have existing code. Even though the module system is opt-in, there are many changes affecting classpath-based applications as well.</p>
+					<p>In the second part we explain how you can migrate to Java 9, and then modularize your application. It also features a case study migrating a Spring and Hibernate application to modules.</p>
 				</div>
 				<div class="services-item col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-4 wow fadeInUp" data-wow-delay=".3s">
-					<img src="img/flat-icons-pack/icon-css-animation.svg" alt="CSS3 Animation">
-					<h3>CSS3 Animation</h3>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
+					<img src="img/flat-icons-pack/icon-responsive-design.svg" alt="Modular Development Tooling">
+					<h3>Modular Development Tooling</h3>
+					<p>The last part focuses on tools and processes for modular development, such as Maven. Also, testing modules brings new challenges.</p>
+					<p>Another exciting tool is jlink. With jlink, you can create small custom runtime images, bundling only the required application modules and JDK modules in a single low-footprint distribution.</p>
 				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2"></div>
+        <div class="col-md-9">
+          <p><a href="https://twitter.com/javamodularity" class="twitter-follow-button" data-show-count="false">Follow @javamodularity</a> All code examples are available on <a href="https://github.com/java9-modularity/examples">GitHub</a> so you can easily try them yourself. <a class="github-button" href="https://github.com/java9-modularity/examples" data-icon="octicon-star" aria-label="Star java9-modularity/examples on GitHub">Star</a></p>
+        </div>
+        <div class="col-md-1"></div>
 			</div>
 		</div>
 	</section>
@@ -109,72 +121,38 @@
 	<!-- Begin Features -->
 	<section class="features" id="features">
 		<div class="container">
-			<h2 class="page-header wow fadeInUp" data-wow-delay=".2s">Book Features</h2>
+			<h2 class="page-header wow fadeInUp" data-wow-delay=".2s">Chapters</h2>
 			<div class="row">
 				<div class="features-main">
 					<div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-4">
-						<div class="features-item features-item-left">
-							<div class="features-item-icon">
-								<img src="img/flat-icons-pack/icon-responsive-design.svg" alt="Responsive Design">
-							</div>
-							<div class="features-item-text">
-								<h3>Responsive Design</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor debitis, quia accusamus quidem</p>
-							</div>
-						</div>
-						<div class="features-item features-item-left">
-							<div class="features-item-icon">
-								<img src="img/flat-icons-pack/icon-24-support.svg" alt="24/7 Support">
-							</div>
-							<div class="features-item-text">
-								<h3>24/7 Support</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor debitis, quia accusamus quidem</p>
-							</div>
-						</div>
-						<div class="features-item features-item-left">
-							<div class="features-item-icon">
-								<img src="img/flat-icons-pack/icon-bootstrap.svg" alt="Bootstrap">
-							</div>
-							<div class="features-item-text">
-								<h3>Bootstrap</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor debitis, quia accusamus quidem</p>
-							</div>
-						</div>
+						<i>Foreword by Alex Buckley</i>
+						<ol>
+							<li>Modularity Matters</li>
+							<li>Modules and the Modular JDK</li>
+							<li>Working with Modules</li>
+							<li>Services</li>
+							<li>Modularity Patterns</li>
+							<li>Advanced Modularity Patterns</li>
+							<li>Migration Without Modules</li>
+							<li>Migration to Modules</li>
+							<li>Migration Case Study: Spring and Hibernate</li>
+							<li>Library Migration</li>
+							<li>Build Tools and IDEs</li>
+							<li>Testing Modules</li>
+							<li>Scaling Down with Custom Runtime Images</li>
+							<li>A Modular Future</li>
+						</ol>
 					</div>
 					<!-- Begin Features Image -->
 					<div class="col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-4">
 						<div class="features-image wow fadeInUp" data-wow-dely=".5s">
-							<img src="img/book-1.png" alt="Book" class="img-responsive">
+							<img src="img/java9modularity-flat-cover.png" alt="Book" class="img-responsive">
 						</div>
 					</div>
 					<!-- End Features Image -->
 					<div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-4">
 						<div class="features-item features-item-right">
-							<div class="features-item-icon">
-								<img src="img/flat-icons-pack/icon-well-documented.svg" alt="Well Documented">
-							</div>
-							<div class="features-item-text">
-								<h3>Well Documented</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor debitis, quia accusamus quidem</p>
-							</div>
-						</div>
-						<div class="features-item features-item-right">
-							<div class="features-item-icon">
-								<img src="img/flat-icons-pack/icon-responsiv-media.svg" alt="Responsiv Media">
-							</div>
-							<div class="features-item-text">
-								<h3>Responsiv Media</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor debitis, quia accusamus quidem</p>
-							</div>
-						</div>
-						<div class="features-item features-item-right">
-							<div class="features-item-icon">
-								<img src="img/flat-icons-pack/icon-more-features.svg" alt="More Features">
-							</div>
-							<div class="features-item-text">
-								<h3>More Features</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor debitis, quia accusamus quidem</p>
-							</div>
+							<a class="twitter-timeline" data-height="470" data-dnt="true" data-theme="light" href="https://twitter.com/javamodularity">Tweets by javamodularity</a>
 						</div>
 					</div>
 				</div>
@@ -203,13 +181,29 @@
 		<div class="container">
 			<div class="row">
 				<div class="author-left col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-6">
-					<img src="img/author-img.jpg" alt="Author" class="img-responsive img-circle wow fadeInLeft" data-wow-delay=".2s">
+					<br><br><br><br><br><br><br><!-- Yes I feel dirty now :) -->
+					<img src="img/sandermak.jpg" alt="Sander Mak" class="img-responsive img-circle wow fadeInLeft" data-wow-delay=".2s">
 				</div>
 				<div class="author-righte col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-6 wow fadeInRight" data-wow-delay=".2s">
-					<h2 class="page-header page-header-left">About Author</h2>
-					<h3>Jessica Doe</h3>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-					<p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop</p>
+					<h2 class="page-header page-header-left">About the Authors</h2>
+					<h3>Sander Mak</h3>
+					<p>Sander is a Fellow at <a href="https://www.luminis.eu">Luminis</a> in The Netherlands. At Luminis, he crafts modular and scalable software, most often on the JVM but with a touch of TypeScript where needed. He is author of the O'Reilly book 'Java 9 Modularity' and an avid conference speaker.</p>
+					<p>Sander loves sharing knowledge, through his blog at <a href="http://branchandbound.net">http://branchandbound.net</a>, and also as <a href="https://www.pluralsight.com/authors/sander-mak">Pluralsight</a> instructor.</p>
+					<a href="https://twitter.com/sander_mak" class="twitter-follow-button" data-show-count="false">Follow @sander_mak</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="author-left col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-6">
+          <br>
+					<img src="img/paulbakker.jpg" alt="Author" class="img-responsive img-circle wow fadeInLeft" data-wow-delay=".2s">
+				</div>
+				<div class="author-righte col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-6 wow fadeInRight" data-wow-delay=".2s">
+					<h3>Paul Bakker</h3>
+					<p>Paul is a senior software engineer with <a href="https://www.netflix.com">Netflix</a> in the Edge Developer Experience team, where he primarily works on tools to increase developer productivity within the company.  Besides his love for writing code, he has a passion for sharing knowledge.</p>
+				  <p>This is his second book after co-authoring "Modular Cloud Apps with OSGi" which was published by O'Reilly in 2013. Paul is also frequently speaking at conferences about modularity, container technology and many other topics. He blogs at <a href="http://paulbakker.io">http://paulbakker.io.</p>
+					<a href="https://twitter.com/pbakker" class="twitter-follow-button" data-show-count="false">Follow @pbakker</a>
+
+
 				</div>
 			</div>
 		</div>
@@ -218,33 +212,33 @@
 	<!-- Begin Feedback -->
 	<section class="feedback" id="feedback">
 		<div class="container">
-			<h2 class="page-header">What our people say Book</h2>
+			<h2 class="page-header">What Other People Say</h2>
 			<div class="row">
 				<div class="col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8">
 					<div class="owl-carousel feedback-carousel prime-theme">
 						<div class="item">
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+							<p>Modularisation is <b>hard</b>. Luckily I've been able to use Paul and Sander's book as my guide for writing my Java 9 tutorials, talks and converting jClarity's applications to use Java's new modular system. I'm buying a copy for all the engineering team at jClarity, it's that good!</p>
 							<div class="feedback-carousel-avatar">
-								<img src="img/people-1.jpg" alt="Avatar" class="img-circle">
+								<img src="img/martijnverburg.png" alt="Avatar" class="img-circle">
 							</div>
-							<h3>John Doe</h3>
-							<p><span>CEO, Name Company</span></p>
+							<h3>Martijn Verburg</h3>
+							<p><span>CEO, jClarity and Java Champion</span></p>
 						</div>
 						<div class="item">
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+							<p>This book delivers the essential practical knowledge you need to create modular applications in Java 9. It's a must read for any developer or architect wanting to adopt one of the most significant features the JDK has seen in many years.</p>
 							<div class="feedback-carousel-avatar">
-								<img src="img/people-2.jpg" alt="Avatar" class="img-circle">
+								<img src="img/simonmaple.jpg" alt="Avatar" class="img-circle">
 							</div>
-							<h3>John Doe</h3>
-							<p><span>CEO, Name Company</span></p>
+							<h3>Simon Maple</h3>
+							<p><span>Director of Developer Relations, ZeroTurnaround</span></p>
 						</div>
 						<div class="item">
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+							<p>Sander and Paul are expert practitioners of Java and trusted guides to the Java 9 ecosystem. They were on the front lines of Java 9’s development, and in the vanguard of efforts to migrate popular open source libraries. “Java 9 Modularity” is the handbook for everyone interested in the core principles and best practices of modularity in Java: application developers looking to create reusable, maintainable components; library developers looking for advice on migration and reflection; and framework developers wishing to exploit the module system’s advanced features. I hope this book will help you to create Java programs whose structure lets them stand the test of time.</p>
 							<div class="feedback-carousel-avatar">
-								<img src="img/people-1.jpg" alt="Avatar" class="img-circle">
+								<img src="img/alexbuckley.png" alt="Avatar" class="img-circle">
 							</div>
-							<h3>John Doe</h3>
-							<p><span>CEO, Name Company</span></p>
+							<h3>Alex Buckley</h3>
+							<p><span>Java Platform Group, Oracle</span></p>
 						</div>
 					</div>
 				</div>
@@ -393,8 +387,8 @@
 	<script src="js/smooth-scroll.min.js"></script>
 	<script src="js/headhesive.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/jquery.placeholder.min.js"></script>
 	<script src="js/main.js"></script>
+	<script async defer src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

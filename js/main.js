@@ -33,7 +33,7 @@ if (!Modernizr.svg) {
 $('.feedback-carousel').owlCarousel({
 	items: 1,
 	autoplay: true,
-	autoplayTimeout: 4000,
+	autoplayTimeout: 6000,
 	autoplaySpeed: 1000,
 	loop: true,
 	dots: true,
@@ -71,66 +71,5 @@ var header = new Headhesive('.navbar', options);
 // Begin Scrollspy
 $('body').scrollspy({target: ".navbar", offset: 60});
 // End Scrollspy
-
-// Begin Fallback Placeholder
-if (!Modernizr.placeholder) {
-	$('input, textarea').placeholder();
-}
-// End Fallback Placeholder
-
-// Begin Form Validate
-$("#form-contact").validate({
-	rules: {
-		name: {
-			required: true,
-			minlength: 3
-		},
-		email: {
-			required: true,
-			email: true
-		},
-		semail: {
-			required: true,
-			email: true
-		},
-		message: {
-			required: true,
-			minlength: 3
-		},
-	},
-	messages: {
-		name: {
-			required: '',
-			minlength: ''
-		},
-		email: {
-			required: '',
-			email: ''
-		},
-		message: {
-			required: '',
-			minlength: ''
-		}
-	},
-	errorClass: "invalid",
-	validClass: "success"
-});
-$("#subscribe").validate({
-	rules: {
-		email: {
-			required: true,
-			email: true
-		},
-	},
-	messages: {
-		email: {
-			required: '',
-			email: ''
-		},
-	},
-	errorClass: "invalid",
-	validClass: "success"
-});
-// End Form Validate
 
 });

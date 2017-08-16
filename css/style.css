@@ -310,6 +310,8 @@ img, svg {
 .features {
   background: #ebf5ff;
   padding-bottom: 70px; }
+  .features iframe {
+    margin-top: -2.4em !important; }
   .features-main {
     margin-top: 20px; }
   .features-item {
@@ -361,6 +363,7 @@ img, svg {
   padding: 75px 0 37.5px;
   background: #ebf5ff; }
   .author img {
+    margin-top: 3em;
     margin: 0 auto; }
   .author p {
     margin-bottom: 25px; }

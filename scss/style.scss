@@ -402,6 +402,9 @@ img, svg {
 ------------------------------------------------------------------*/
 
 .features {
+	iframe {
+		margin-top: -2.4em !important;
+	}
 	background: $bg-dark;
 	padding-bottom: 70px;
 	&-main {
@@ -474,6 +477,7 @@ img, svg {
 	padding: 75px 0 (75px / 2);
 	background: $bg-dark;
 	img {
+		margin-top: 3em;
 		margin: 0 auto;
 	}
 	p {
