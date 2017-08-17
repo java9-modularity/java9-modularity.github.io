@@ -441,7 +441,6 @@ img, svg {
 ------------------------------------------------------------------*/
 .contact {
   padding-bottom: 45px;
-  text-align: center;
   background: #ebf5ff; }
   .contact label.invalid {
     position: absolute; }
