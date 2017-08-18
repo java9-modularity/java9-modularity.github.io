@@ -342,6 +342,11 @@ img, svg {
 		opacity: 0;
 	}
 	&-main {
+		p.subtitle {
+			margin-top: -1.8em;
+			font-family: $header-font;
+			font-size: 1.1em;
+		}
 		padding-top: 180px;
 		h1 {
 			margin-bottom: 25px;
@@ -461,7 +466,9 @@ img, svg {
 	padding: 75px 0;
 	background: $bg-light;
 	img {
-		margin: 0 auto;
+
+		margin-top: 20em;
+
 	}
 	p {
 		margin-bottom: 25px;
@@ -523,11 +530,17 @@ img, svg {
 .plans {
 	padding-bottom: 75px;
 	background: $bg-dark;
+
+	a#safaributton {
+		margin: 5px;
+	}
+
 	.item-main {
 		padding: 40px;
 		text-align: center;
 		border: 1px solid $gray;
 		background: #fff;
+		height: 34em;
 		h3 {
 			margin: 0;
 		}
@@ -555,25 +568,6 @@ img, svg {
 }
 /* End Plans */
 
-/*------------------------------------------------------------------
-10. Begin Download
-------------------------------------------------------------------*/
-
-.download {
-	padding-bottom: 75px;
-	text-align: center;
-	background: $bg-light;
-	.btn {
-		margin: 0 7px;
-		img {
-			vertical-align: bottom;
-			margin-right: 5px;
-			height: 18px;
-			width: 20px;
-		}
-	}
-}
-/* End Download */
 
 /*------------------------------------------------------------------
 11. Begin Contact Us
@@ -581,13 +575,7 @@ img, svg {
 
 .contact {
 	padding-bottom: (75px - 30px);
-	background: $bg-dark;
-	label.invalid {
-		position: absolute;
-	}
-	textarea {
-		resize: none;
-	}
+	background: $bg-light;
 }
 /* End Contact Us */
 
