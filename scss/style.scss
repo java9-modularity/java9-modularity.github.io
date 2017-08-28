@@ -387,6 +387,7 @@ img, svg {
 .services {
 	background: $bg-light;
 	padding-bottom: 45px;
+
 	&-item {
 		margin-top: 25px;
 		margin-bottom: 15px;
@@ -410,7 +411,14 @@ img, svg {
 	iframe {
 		margin-top: -2.4em !important;
 	}
+
 	background: $bg-dark;
+
+
+	.chapters li {
+		line-height: 2em;
+	}
+
 	padding-bottom: 70px;
 	&-main {
 		margin-top: 20px;
@@ -463,7 +471,7 @@ img, svg {
 ------------------------------------------------------------------*/
 
 .description {
-	padding: 75px 0;
+	padding: 25px 0;
 	background: $bg-light;
 	img {
 
@@ -481,7 +489,7 @@ img, svg {
 ------------------------------------------------------------------*/
 
 .author {
-	padding: 75px 0 (75px / 2);
+	padding-bottom: 3em;
 	background: $bg-dark;
 	img {
 		margin-top: 3em;

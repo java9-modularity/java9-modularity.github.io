@@ -316,6 +316,8 @@ img, svg {
   padding-bottom: 70px; }
   .features iframe {
     margin-top: -2.4em !important; }
+  .features .chapters li {
+    line-height: 2em; }
   .features-main {
     margin-top: 20px; }
   .features-item {
@@ -352,7 +354,7 @@ img, svg {
 6. Begin Description
 ------------------------------------------------------------------*/
 .description {
-  padding: 75px 0;
+  padding: 25px 0;
   background: #fff; }
   .description img {
     margin-top: 20em; }
@@ -364,7 +366,7 @@ img, svg {
 7. Begin Author
 ------------------------------------------------------------------*/
 .author {
-  padding: 75px 0 37.5px;
+  padding-bottom: 3em;
   background: #ebf5ff; }
   .author img {
     margin-top: 3em;
