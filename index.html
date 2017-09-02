@@ -165,18 +165,33 @@
 			<div class="row">
 				<div class="description-left col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-6 wow fadeInLeft" data-wow-delay=".2s">
 					<h2 class="page-header page-header-left">Why Modules?<h2>
-						<p>What is modularity in Java? To some, it’s a principle for development: programming to interfaces and hiding the details of implementations. This is the “school of encapsulation”. To others, it’s about leaning hard on class loaders to provide dynamic execution environments. This is the “school of isolation”. To still others, it’s about artifacts, repositories, and tooling. This is the “school of configuration”. Individually, these perspectives are valid, but they feel like pieces of a larger story that’s not quite clear. If a developer knows that some portion of their code is for internal use only, why can’t they hide a package as easily as hiding a class or a field? If code can only be compiled and run in the presence of its dependencies, why don’t those dependencies flow smoothly from compilation to packaging to installation to execution? If tools only work when presented with pristine self-describing artifacts, how can anyone reuse older libraries that are just plain JAR files?</p>
 
-						<p>Java 9 offers a coherent story for modularity by introducing modules as a first-class feature of the Java platform. A module is a set of packages designed for reuse. This simple concept has a surprisingly powerful impact on how code is developed, deployed, and run. The longstanding mechanisms for promoting and controlling reuse in Java – interfaces, access control, JAR files, class loaders, dynamic linking – all work better when packages are placed into modules.</p>
 
-						<p>First, modules clarify the structure of a program in a way that other mechanisms cannot. Many developers will be surprised that their code is not as well structured as they thought. For example, a codebase spread across multiple JAR files has a good chance of cycles between classes in different JAR files, but cycles between classes in different modules are forbidden. One of the motivations for investing in the modularization of a codebase is the knowledge that, once complete, there won’t be any backsliding into the ball of mud that cyclic dependencies allow. Developing with modules also leads to programming with services, which reduce coupling and increase abstraction even further.</p>
+						<p>The art of structuring large codebases is an undervalued one. This is neither a new
+problem, nor is it specific to Java. However, Java is one of the mainstream languages
+in which very large applications are built all the time—often making heavy use of
+many libraries from the Java ecosystem. Under these circumstances, systems can outgrow
+our capacity for understanding and efficient development. A lack of structure is
+dearly paid for in the long run, experience shows.</p>
 
-						<p>Second, modules engender a sense of responsibility for code in a way that other mechanisms cannot. A developer who exports packages from a module is making a commitment to a stable API, and even the name of the module itself is part of the API. A developer who bundles too much functionality into a single module will cause that module to drag in a large number of dependencies which are irrelevant for any single task; anyone who reuses the module will realize its sprawling nature even if its internals are hidden. Developing with modules encourages every developer to think about the stability and cohesiveness of their code.</p>
-						<p>&mdash; <i>Alex Buckley</i>, Oracle Platform Team<br>
-							<span class="text-muted">(Excerpt from the foreword of Java 9 Modularity.)<span></p>
+						<p><em>Modularity</em> is one of the techniques you can employ to manage and reduce this complexity.
+Java 9 introduces a new module system that makes modularization easier and
+more accessible. It builds on top of abstractions Java already has for modular development.
+In a sense, it promotes existing best practices on large-scale Java development
+to be part of the Java language.</p>
+
+						<p>The Java module system will have a profound impact on Java development. It represents
+a fundamental shift to modularity as a first-class citizen for the whole Java platform.
+Modularization is addressed from the ground up, with changes to the language,
+Java Virtual Machine (JVM), and standard libraries.</p>
+
+						<p>Now is the time to read up on modules. JDK 9 itself is modularized (shown right) so you will encounter modules right from the start.
+							See how they can improve the structure and integrity of your applications.</p>
+						<p>&mdash; Introduction of <i>Java 9 Modularity</i><br>
+							<span class="text-muted">(Excerpt from Chapter 1)<span></p>
 				</div>
 				<div class="description-right col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-6">
-					<a id="modulegraph" href="img/java.se.ee.dot.png" target="_blank"><img src="img/java.se.ee.small.dot.png" title="Subset of JDK 9 module graph (click to enlarge)" alt="Subset of JDK 9 module graph" class="img-responsive wow fadeInRight" data-wow-delay=".2s"></a>
+					<a id="modulegraph" href="img/java.se.ee.png" target="_blank"><img src="img/java.se.ee.small.png" title="Subset of JDK 9 module graph (click to enlarge)" alt="Subset of JDK 9 module graph" class="img-responsive wow fadeInRight" data-wow-delay=".2s"></a>
 				</div>
 			</div>
 		</div>
@@ -223,7 +238,7 @@
 				<div class="col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8">
 					<div class="owl-carousel feedback-carousel prime-theme">
 						<div class="item">
-							<p>Modularisation is <b>hard</b>. Luckily I've been able to use Paul and Sander's book as my guide for writing my Java 9 tutorials, talks and converting jClarity's applications to use Java's new modular system. I'm buying a copy for all the engineering team at jClarity, it's that good!</p>
+							<p>Modularization is <b>hard</b>. Luckily I've been able to use Paul and Sander's book as my guide for writing my Java 9 tutorials, talks, and converting jClarity's applications to use Java's new modular system. I'm buying a copy for all the engineering team at jClarity, it's that good!</p>
 							<div class="feedback-carousel-avatar">
 								<img src="img/martijnverburg.png" alt="Avatar" class="img-circle">
 							</div>
